@@ -1,0 +1,19 @@
+[project]
+name = "branch-age"
+version = "0.1.0"
+description = "List git branches by last-commit age and prune stale ones."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "branch-age contributors" }]
+
+[project.scripts]
+branch-age = "branch_age.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["branch_age*"]
